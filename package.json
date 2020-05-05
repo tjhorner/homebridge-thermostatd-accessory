@@ -1,0 +1,33 @@
+{
+  "name": "homebridge-thermostatd-accessory",
+  "version": "1.0.0",
+  "description": "Homebridge accessory plugin for thermostatd",
+  "main": "dist/accessory.js",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build": "rimraf ./dist && tsc",
+    "prepublishOnly": "npm run build",
+    "postpublish": "npm run clean",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "homebridge": ">=1.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "TJ Horner <me@tjhorner.com>",
+  "license": "ISC",
+  "keywords": [
+    "homebridge-plugin"
+  ],
+  "devDependencies": {
+    "@types/node": "10.17.19",
+    "typescript": "^3.8.3",
+    "rimraf": "^3.0.2",
+    "homebridge": "^1.0.4"
+  },
+  "dependencies": {
+    "thermostatd": "^1.0.3"
+  }
+}
